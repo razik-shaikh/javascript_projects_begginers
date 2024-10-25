@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>customer</title>
+</head>
+<style>
+    td {
+        word-break: break-all;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Form</h2>
+                <form name="myF" id="customerForm" onsubmit="return validateForm()">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <label for="name">Name</label>
+                            </td>
+                            <td><input type="text" name="name" id="name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" name="email" id="email" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="csType">Customer Type</label>
+                            </td>
+                            <td>
+                                <select name="csType" id="csType" onchange="changCT()">
+                                    <option value=""></option>
+                                    <option value="existing">Existing</option>
+                                    <option value="new">New</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr id="amt" style="display:none;">
+                            <td id="amtL"><label for="amount">Amount</label></td>
+                            <td id="amtI"><input type="number" name="amount" id="amount"></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-success" onclick="submitForm()">Submit</button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-md-4" id="exC">
+                <h2>Existing Customers</h2>
+                <table class="table" id="existingTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-md-4" id="neC">
+                <h2>New Customers</h2>
+                <table class="table" id="newTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="customer_manage.js">
+        //Please Add Your JS Code Here...
+
+        
+    </script>
+</body>
+
+</html>

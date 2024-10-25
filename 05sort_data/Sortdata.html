@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable and Filterable Table</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Sortable and Filterable Table</h2>
+        <input onkeyup="filterList()" type="text" id="searchInput" placeholder="Search...">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Product Name</th>
+                    <th onclick="sortTable(1)">Price</th>
+                    <th onclick="sortTable(2)">Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product A</td>
+                    <td>$10</td>
+                    <td>Category 1</td>
+                </tr>
+                <tr>
+                    <td>Product B</td>
+                    <td>$20</td>
+                    <td>Category 2</td>
+                </tr>
+                <tr>
+                    <td>Product C</td>
+                    <td>$15</td>
+                    <td>Category 3</td>
+                </tr>
+                <tr>
+                    <td>Product D</td>
+                    <td>$18</td>
+                    <td>Category 1</td>
+                </tr>
+                <tr>
+                    <td>Product E</td>
+                    <td>$12</td>
+                    <td>Category 4</td>
+                </tr>
+                <tr>
+                    <td>Product F</td>
+                    <td>$16</td>
+                    <td>Category 1</td>
+                </tr>
+                <tr>
+                    <td>Product G</td>
+                    <td>$14</td>
+                    <td>Category 3</td>
+                </tr>
+                <tr>
+                    <td>Product H</td>
+                    <td>$19</td>
+                    <td>Category 1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="sort.js">
+        // Write JS Code Here
+
+       
+    </script>
+
+</body>
+
+</html>

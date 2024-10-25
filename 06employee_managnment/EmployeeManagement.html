@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Database Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        #formContainer,
+        #searchContainer {
+            margin-bottom: 20px;
+        }
+
+        #employeeForm input[type="text"],
+        #employeeForm input[type="number"],
+        #employeeForm input[type="email"],
+        #employeeForm input[type="text"] {
+            width: calc(25% - 10px);
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #employeeForm .input-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button {
+
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2b3d68;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1c2850;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #employeeTableBody td:last-child {
+            white-space: nowrap;
+        }
+
+        #employeeTableBody button {
+            margin-right: 5px;
+        }
+
+        .btn1 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Employee Database Management System</h2>
+        <div id="formContainer">
+            <h3>Add Employee</h3>
+            <form id="employeeForm">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="number" id="age" placeholder="Age" required>
+                    <input type="email" class="email" id="email" placeholder="Email" required>
+                    <input type="text" id="department" placeholder="Department" required>
+                    <button type="submit" class="btn1">Add Employee</button>
+                </div>
+            </form>
+        </div>
+        <div id="searchContainer">
+            <h3>Search Employees</h3>
+            <input type="text" id="searchInput" placeholder="Search by Name or Department">
+        </div>
+        <div id="employeeList">
+            <h3>Employee List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Employee records will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="employee.js">
+        // Write Your JS Code Here.....
+    
+    </script>
+
+</body>
+
+</html>
